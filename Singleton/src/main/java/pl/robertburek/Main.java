@@ -11,5 +11,4 @@ public class Main {
 
         System.out.println("To są te same instancje: " + (engine == engine2));
     }
-
 }
