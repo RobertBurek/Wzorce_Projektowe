@@ -2,8 +2,9 @@ package pl.robertburek.order;
 
 public enum OrderStatus {
 
-    REALISED,
-    SEND,
-    RECEIVED
+    ZAREJESTROWANE,
+    POTWIERDZONE,
+    WYSŁANE,
+    ODEBRANE
 
 }
