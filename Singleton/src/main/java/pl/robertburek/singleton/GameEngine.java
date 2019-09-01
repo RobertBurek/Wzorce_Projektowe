@@ -1,6 +1,10 @@
 package pl.robertburek.singleton;
 
-public class GameEngine {
+import java.io.Serializable;
+
+public class GameEngine implements Serializable {
+
+    public static final long serialVersionUID = 25131531;
 
     private int hp = 100;
     private String characterName = "";
@@ -20,5 +24,9 @@ public class GameEngine {
             //zmienamy stan gry
             //renderujemy grafike
         }
+    }
+
+    protected Object readResolved(){
+        return getInstance();
     }
 }
