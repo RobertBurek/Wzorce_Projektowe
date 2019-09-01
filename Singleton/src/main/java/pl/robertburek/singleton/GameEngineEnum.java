@@ -5,10 +5,10 @@ package pl.robertburek.singleton;
  */
 public enum GameEngineEnum {
 
-        INSTANCE("Robert");
+    INSTANCE("Robert");
 
-        private int hp = 100;
-        private String characterName = "";
+    private int hp = 100;
+    private String characterName = "";
 
     GameEngineEnum(String name) {
         this.characterName = name;

@@ -26,7 +26,7 @@ public class GameEngine implements Serializable {
         }
     }
 
-    protected Object readResolved(){
+    protected Object readResolved() {
         return getInstance();
     }
 }
