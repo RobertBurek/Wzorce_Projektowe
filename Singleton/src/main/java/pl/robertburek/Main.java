@@ -1,13 +1,13 @@
 package pl.robertburek;
 
-import pl.robertburek.singleton.GameEngine;
+import pl.robertburek.singleton.GameEngineEnum;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        GameEngine engine = GameEngine.getInstance();
-        GameEngine engine2 = GameEngine.getInstance();
+        GameEngineEnum engine = GameEngineEnum.INSTANCE;
+        GameEngineEnum engine2 = GameEngineEnum.INSTANCE;
 
         System.out.println("To są te same instancje: " + (engine == engine2));
     }
