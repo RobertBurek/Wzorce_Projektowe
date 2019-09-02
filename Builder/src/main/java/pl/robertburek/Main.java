@@ -1,7 +1,10 @@
 package pl.robertburek;
 
 
+import pl.robertburek.house.BigHouseBuilder;
 import pl.robertburek.house.House;
+import pl.robertburek.house.HouseDirector;
+import pl.robertburek.house.SmallHouseBuilder;
 
 public class Main {
 
@@ -10,25 +13,19 @@ public class Main {
 //        House house1 = new House("walls", "floors", "rooms", "windows", "doors", "garage");
 //        House house2 = new House("")
 
-        House house = new House.HouseBuilder()
-                .buildDoors("doors")
-                .buildFloors("floors")
-                .buildRoof("roof")
-                .buildGarage("garage")
-                .build();
+        SmallHouseBuilder smallHouseBuilder = new SmallHouseBuilder();
+        BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
 
-        House house2 = new House.HouseBuilder()
-                .build();
+        HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
+        smallHouseDirector.buildHouse();
 
-        House house3 = new House.HouseBuilder()
-                .buildRooms("rooms")
-                .buildDoors("doors")
-                .buildWindows("windows")
-                .build();
+        HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
+        bigHouseDirector.buildHouse();
 
-        System.out.println(house);
-        System.out.println(house2);
-        System.out.println(house3);
+        House smallHouse = smallHouseDirector.getHouse();
+        House bigHouse = bigHouseDirector.getHouse();
+
+        System.out.println(smallHouse);
+        System.out.println(bigHouse);
     }
-
 }
