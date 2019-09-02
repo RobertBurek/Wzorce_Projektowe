@@ -1,6 +1,7 @@
 package pl.robertburek;
 
 
+import pl.robertburek.flight.FlightLeg;
 import pl.robertburek.house.BigHouseBuilder;
 import pl.robertburek.house.House;
 import pl.robertburek.house.HouseDirector;
@@ -37,5 +38,15 @@ public class Main {
 
         System.out.println(smallHouse);
         System.out.println(bigHouse);
+
+        System.out.println("--------------Zadanie lista lotów---------------------------");
+
+        FlightLeg leg = new FlightLeg.FlightLegBuilder("Las Vegas", "Los Angeles").price(50).build();
+
+        System.out.println(leg);
+
+        FlightLeg leg1 = new FlightLeg.FlightLegBuilder("Las Vegas", "Los Angeles").build();
+        System.out.println("Oczekujemy błędu - IllegalStateException.");
+        System.out.println(leg1);
     }
 }
