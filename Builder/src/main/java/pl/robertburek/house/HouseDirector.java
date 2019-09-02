@@ -7,7 +7,14 @@ public class HouseDirector {
 
     private HouseBuilder houseBuilder;
 
-    public HouseDirector(HouseBuilder houseBuilder) {
+//    public HouseDirector(HouseBuilder houseBuilder) {
+//        this.houseBuilder = houseBuilder;
+//    }
+
+    public HouseDirector() {
+    }
+
+    public void setHouseBuilder(HouseBuilder houseBuilder) {
         this.houseBuilder = houseBuilder;
     }
 

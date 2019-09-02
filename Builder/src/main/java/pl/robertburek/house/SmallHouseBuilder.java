@@ -16,7 +16,7 @@ public class SmallHouseBuilder implements HouseBuilder {
     }
 
     public void buildFloors() {
-        this.house.setFloors("small floors");
+//        this.house.setFloors("small floors");
     }
 
     public void buildRooms() {
@@ -42,4 +42,5 @@ public class SmallHouseBuilder implements HouseBuilder {
     public House getHouse() {
         return house;
     }
+
 }

@@ -16,14 +16,24 @@ public class Main {
         SmallHouseBuilder smallHouseBuilder = new SmallHouseBuilder();
         BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
 
-        HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
-        smallHouseDirector.buildHouse();
+        HouseDirector houseDirector = new HouseDirector();
+        houseDirector.setHouseBuilder(smallHouseBuilder);
+        houseDirector.buildHouse();
+        House smallHouse = houseDirector.getHouse();
+        houseDirector.setHouseBuilder(bigHouseBuilder);
+        houseDirector.buildHouse();
+        House bigHouse = houseDirector.getHouse();
 
-        HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
-        bigHouseDirector.buildHouse();
+//        HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
+//        smallHouseDirector.buildHouse();
 
-        House smallHouse = smallHouseDirector.getHouse();
-        House bigHouse = bigHouseDirector.getHouse();
+//        HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
+//        bigHouseDirector.buildHouse();
+
+//        House smallHouse = smallHouseDirector.getHouse();
+//        House smallHouse = smallHouseBuilder.getHouse();
+//        House bigHouse = bigHouseDirector.getHouse();
+//        House bigHouse = bigHouseBuilder.getHouse();
 
         System.out.println(smallHouse);
         System.out.println(bigHouse);
