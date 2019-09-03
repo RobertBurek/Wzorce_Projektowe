@@ -1,4 +1,4 @@
-package pl.robertburek;
+package pl.robertburek.units;
 
 public abstract class Unit {
 
@@ -6,7 +6,7 @@ public abstract class Unit {
     private int exp;
     private int dmgDone;
 
-    public Unit(int hp, int exp, int dmgDone) {
+    protected Unit(int hp, int exp, int dmgDone) {
         this.hp = hp;
         this.exp = exp;
         this.dmgDone = dmgDone;
@@ -22,5 +22,14 @@ public abstract class Unit {
 
     public int getDmgDone() {
         return dmgDone;
+    }
+
+    @Override
+    public String toString() {
+        return "Unit{" +
+                "hp=" + hp +
+                ", exp=" + exp +
+                ", dmgDone=" + dmgDone +
+                '}';
     }
 }
