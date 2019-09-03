@@ -3,9 +3,8 @@ package pl.robertburek.units;
 /**
  * Created by Robert Burek
  */
-public class UnitFactory extends Factory {
+public class UnitFactory {
 
-    @Override
     public Unit createUnit(UnitType unitType) {
         switch (unitType) {
             case TANK:
