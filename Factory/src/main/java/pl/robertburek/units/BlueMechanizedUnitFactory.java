@@ -3,14 +3,14 @@ package pl.robertburek.units;
 /**
  * Created by Robert Burek
  */
-public class UnitFactory {
+public class BlueMechanizedUnitFactory extends MechanizedFactory {
 
-    public Unit createUnit(UnitType unitType) {
+    public MechanizedUnit createUnit(MechanizedUnitType unitType) {
         switch (unitType) {
             case TANK:
                 return new Tank(200, 0, 20);
-            case RIFLEMAN:
-                return new Rifleman(100, 0, 10);
+            case TRANSPORTER:
+                return new Transporter(80, 0, 15);
             default:
                 throw new UnsupportedOperationException("No such type");
         }

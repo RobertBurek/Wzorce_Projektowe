@@ -1,6 +1,6 @@
 package pl.robertburek.units;
 
-public class Tank extends Unit {
+public class Tank extends MechanizedUnit {
 
 
     Tank(int hp, int exp, int dmgDone) {

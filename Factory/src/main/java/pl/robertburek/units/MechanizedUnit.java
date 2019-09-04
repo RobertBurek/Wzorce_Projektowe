@@ -1,12 +1,15 @@
 package pl.robertburek.units;
 
-public abstract class Unit {
+/**
+ * Created by Robert Burek
+ */
+public class MechanizedUnit {
 
     private int hp;
     private int exp;
     private int dmgDone;
 
-    protected Unit(int hp, int exp, int dmgDone) {
+    protected MechanizedUnit(int hp, int exp, int dmgDone) {
         this.hp = hp;
         this.exp = exp;
         this.dmgDone = dmgDone;
@@ -26,7 +29,7 @@ public abstract class Unit {
 
     @Override
     public String toString() {
-        return "Unit{" +
+        return "MechanizedUnit{" +
                 "hp=" + hp +
                 ", exp=" + exp +
                 ", dmgDone=" + dmgDone +
