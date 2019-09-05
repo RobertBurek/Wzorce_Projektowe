@@ -8,17 +8,17 @@ public class Main {
 //        InfantryUnit tank = new Tank(200, 0, 20);
 //        InfantryUnit rifleman = new Rifleman(100, 0, 10);
 
-        InfantryFactory blueInfrantyFactory = new BlueInfantryUnitFactory();
-        InfantryFactory redInfrantyFactory =   new RedInfantryUnitFactory();
+        Factory blueFactory = new BlueFactory();
+        Factory redFactory = new RedFactory();
 
-        MechanizedFactory blueMechanizedFactory = new BlueMechanizedUnitFactory();
-        MechanizedFactory redMechanizedFactory =   new RedMechanizedUnitFactory();
 
-        MechanizedUnit blueTank = blueMechanizedFactory.createUnit(MechanizedUnitType.TANK);
-        MechanizedUnit blueTransporter = blueMechanizedFactory.createUnit(MechanizedUnitType.TRANSPORTER);
-        InfantryUnit redSniper = redInfrantyFactory.createUnit(InfantryUnitType.SNIPER);
-        MechanizedUnit redTank = redMechanizedFactory.createUnit(MechanizedUnitType.TANK);
-        InfantryUnit blueRifleman = blueInfrantyFactory.createUnit(InfantryUnitType.RIFLEMAN);
+        MechanizedUnit blueTank = blueFactory.createMechanizedUnit(UnitType.TANK);
+        MechanizedUnit blueTransporter = blueFactory.createMechanizedUnit(UnitType.TRANSPORTER);
+        InfantryUnit redSniper = redFactory.createInfantryUnit(UnitType.SNIPER);
+        MechanizedUnit redTank = redFactory.createMechanizedUnit(UnitType.TANK);
+        InfantryUnit blueRifleman = blueFactory.createInfantryUnit(UnitType.RIFLEMAN);
+        AirUnit blueHelicopter = blueFactory.createAirUnit(UnitType.HELICOPTER);
+        AirUnit redHelicopter = redFactory.createAirUnit(UnitType.HELICOPTER);
 
 //        InfantryUnit tank2 = new Tank(100,1,20); //nie zadziała ze względu na zasięg klas
 
@@ -27,6 +27,8 @@ public class Main {
         System.out.println("blueRifleman: " + blueRifleman);
         System.out.println("redSniper: " + redSniper);
         System.out.println("redTank: " + redTank);
+        System.out.println("redHelicopter: " + redHelicopter);
+        System.out.println("blueHelicopter: " + blueHelicopter);
 
     }
 }
