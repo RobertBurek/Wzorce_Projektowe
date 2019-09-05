@@ -1,6 +1,8 @@
 package pl.robertburek;
 
+import pl.robertburek.carsfactory.*;
 import pl.robertburek.units.*;
+import pl.robertburek.units.Factory;
 
 public class Main {
 
@@ -29,6 +31,21 @@ public class Main {
         System.out.println("redTank: " + redTank);
         System.out.println("redHelicopter: " + redHelicopter);
         System.out.println("blueHelicopter: " + blueHelicopter);
+
+        System.out.println("---------------Moje zadanie--------------");
+
+        pl.robertburek.carsfactory.Factory commonwealthFactory = new CommonwealthFactory();
+        pl.robertburek.carsfactory.Factory continentalFactory = new ContinentalFactory();
+
+        Car bmw = commonwealthFactory.buildBmw(BmwModel.E60);
+        System.out.println(bmw.getSteeringWheelPosition());
+
+        Car ford = continentalFactory.buildFord(FordModel.CMAX);
+        System.out.println(ford.getSteeringWheelPosition());
+
+        System.out.println("-----------------------------------------");
+        System.out.println(bmw);
+        System.out.println(ford);
 
     }
 }
