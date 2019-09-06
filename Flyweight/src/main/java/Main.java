@@ -1,6 +1,11 @@
 import pl.robertburek.flyweight.Destroyer;
 import pl.robertburek.flyweight.Rifleman;
 import pl.robertburek.flyweight.TeslaTank;
+import pl.robertburek.flyweight.checkFigures.ChessPiece;
+import pl.robertburek.flyweight.checkFigures.chessPiece.BlackPiece;
+import pl.robertburek.flyweight.checkFigures.chessPiece.BlackQueen;
+import pl.robertburek.flyweight.checkFigures.chessPiece.WhitePiece;
+import pl.robertburek.flyweight.checkFigures.chessPiece.WhiteQueen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +42,15 @@ public class Main {
         System.out.println(activeUnits.get(4 + rand));
         System.out.println("Element 4 jest równy elementowi " + (5 + rand) + ": " +
                 ((Rifleman) activeUnits.get(4)).getStats().equals(((Rifleman) activeUnits.get(4 + rand)).getStats()));
+
+        System.out.println("------------------Moje zadanie----------------------");
+        ChessPiece blackPawn = new BlackPiece("Czarny Pionek","7", "a");
+        ChessPiece whitePawn = new WhitePiece("Biały Pionek","2","a");
+        ChessPiece blackQueen = new BlackQueen("Czarna Królowa");
+        ChessPiece whiteQueen = new WhiteQueen("Biala Królowa");
+        //exactly same color object is used
+        System.out.println(blackPawn.getColor()==blackQueen.getColor());
+        System.out.println(whitePawn.getColor()==whiteQueen.getColor());
 
     }
 }
